@@ -1,17 +1,16 @@
 {
   "manifest_version": 3,
   "name": "Remove Grayscale",
-  "description": "Restores color to websites that use CSS grayscale filters.",
   "version": "1.0",
+  "description": "Restores color on the current tab when you click the icon.",
+  "action": {
+    "default_title": "Bring color back!"
+  },
+  "permissions": ["activeTab", "scripting"],
+  "background": {
+    "service_worker": "background.js"
+  },
   "icons": {
     "128": "icon128.png"
-  },
-  "content_scripts": [
-    {
-      "matches": ["<all_urls>"],
-      "js": ["content.js"],
-      "run_at": "document_end"
-    }
-  ],
-  "permissions": ["scripting"]
+  }
 }
