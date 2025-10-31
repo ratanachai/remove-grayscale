@@ -1,14 +1,14 @@
 {
   "manifest_version": 3,
-  "name": "Remove Grayscale",
-  "version": "1.0",
-  "description": "Restores color on the current tab when you click the icon.",
-  "action": {
-    "default_title": "Bring color back!"
-  },
-  "permissions": ["activeTab", "scripting"],
+  "name": "Remove Grayscale (Auto on Current Tab)",
+  "version": "1.1",
+  "description": "Restores color on the current tab and keeps it after navigation.",
+  "permissions": ["activeTab", "scripting", "webNavigation"],
   "background": {
     "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "Bring color back!"
   },
   "icons": {
     "128": "icon128.png"
